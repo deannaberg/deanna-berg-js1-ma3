@@ -10,6 +10,8 @@ async function getGames() {
 
 	const gameResults = results.results;
 
+	resultDisplay.innerHTML = "";
+
 	for (let i = 0; i < gameResults.length; i++) {
 		if (i === 8) {
 			break;
@@ -19,7 +21,7 @@ async function getGames() {
 		const rating = gameResults[i].rating;
 		//console.log(name, rating, tags);
 
-		resultDisplay.innerHTML += `<div>Name: ${name} Rating: ${rating}: Tags: ${tags} </div>`;
+		resultDisplay.innerHTML += `<div>Name: ${name} Rating: ${rating}: Tags: ${tags}</div>`;
 	}
 }
 getGames();
