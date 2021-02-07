@@ -19,9 +19,8 @@ async function getGames() {
 		const tags = gameResults[i].tags.length;
 		const name = gameResults[i].name;
 		const rating = gameResults[i].rating;
-		//console.log(name, rating, tags);
 
-		resultDisplay.innerHTML += `<div>Name: ${name} Rating: ${rating}: Tags: ${tags}</div>`;
+		resultDisplay.innerHTML += `<div><h2>${name}</h2>Rating: ${rating} Tags: ${tags}</div>`;
 	}
 }
 getGames();
